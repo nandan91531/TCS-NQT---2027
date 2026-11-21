@@ -63,7 +63,7 @@ for i in range(N):
 
 fraud = set()
 for i in range(N-1):
-    for j in range(1,N):
+    for j in range(i,N):
         if transactions[i][0]==transactions[j][0] and transactions[i][1]==transactions[j][1] and transactions[i][2]==transactions[j][2] and abs(transactions[i][3] - transactions[j][3]) <=60:
             fraud.add(i)
             fraud.add(j)
