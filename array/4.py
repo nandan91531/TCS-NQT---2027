@@ -1,3 +1,56 @@
+
+"""
+QUESTION: Bank Transaction Fraud Detection
+
+You are given N bank transactions.
+
+Each transaction contains:
+    Sender
+    Receiver
+    Amount
+    Timestamp
+
+A transaction is considered FRAUD if:
+
+1. Sender, Receiver, and Amount are the same.
+2. Timestamp difference between two transactions
+   is less than or equal to 60 seconds.
+
+Your task is to find and print all such fraud transactions.
+
+-------------------------
+EXAMPLE INPUT:
+-------------------------
+5
+ANU JON 200.50 1000
+ANU JON 200.50 1050
+RAM SAM 300.00 2000
+ANU JON 200.50 2000
+RAM SAM 300.00 2040
+
+-------------------------
+EXPECTED OUTPUT:
+-------------------------
+Fraud Transactions:
+ANU JON 200.5 1000
+ANU JON 200.5 1050
+RAM SAM 300.0 2000
+RAM SAM 300.0 2040
+
+-------------------------
+CONSTRAINT:
+-------------------------
+Timestamp difference <= 60 seconds.
+
+-------------------------
+APPROACH:
+-------------------------
+Use Nested Loops (Brute Force).
+
+Time Complexity: O(N^2)
+Space Complexity: O(N)
+"""
+
 transactions = []
 N = int(input("enter no. of transaction:"))
 for i in range(N):
